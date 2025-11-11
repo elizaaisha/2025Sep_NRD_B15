@@ -94,7 +94,9 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#day-readmission-timing-unadjusted" id="toc-day-readmission-timing-unadjusted" class="nav-link" data-scroll-target="#day-readmission-timing-unadjusted">30-Day Readmission Timing (Unadjusted)</a></li>
   <li><a href="#readmission-hospitalization-characteristics" id="toc-readmission-hospitalization-characteristics" class="nav-link" data-scroll-target="#readmission-hospitalization-characteristics">Readmission Hospitalization Characteristics</a>
   <ul class="collapse">
+  <li><a href="#in-hospital-mortality-among-readmitted-patients" id="toc-in-hospital-mortality-among-readmitted-patients" class="nav-link" data-scroll-target="#in-hospital-mortality-among-readmitted-patients">In-Hospital Mortality Among Readmitted Patients</a></li>
   <li><a href="#resource-utilization-during-readmission" id="toc-resource-utilization-during-readmission" class="nav-link" data-scroll-target="#resource-utilization-during-readmission">Resource Utilization During Readmission</a></li>
+  <li><a href="#resource-utilization-during-readmission-1" id="toc-resource-utilization-during-readmission-1" class="nav-link" data-scroll-target="#resource-utilization-during-readmission-1">Resource Utilization During Readmission</a></li>
   </ul></li>
   <li><a href="#multivariable-analyses" id="toc-multivariable-analyses" class="nav-link" data-scroll-target="#multivariable-analyses">Multivariable Analyses</a>
   <ul class="collapse">
@@ -162,13 +164,7 @@ ul.task-list li input[type="checkbox"] {
 <p>Patients were eligible for inclusion if they met all of the following criteria:</p>
 <ul>
 <li><p>Patients aged ≤ 18 years</p></li>
-<li><p>AECOPD diagnosis:</p>
-<ul>
-<li><p>Principal diagnosis of asthma based on specific ICD-10-CM codes:</p>
-<ul>
-<li>`J45’</li>
-</ul></li>
-</ul></li>
+<li><p>Principal diagnosis of asthma based on specific ICD-10-CM code `J45’</p></li>
 <li><p>Information for obstructive sleep apnea not missing</p></li>
 <li><p>Non-elective admission</p></li>
 <li><p>Index discharge by the end of November to allow for a complete 30-day follow-up period</p></li>
@@ -182,12 +178,14 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p>Secondary Outcomes (index admission):</p>
 <ul>
+<li><p>In-hospital mortality (binary)</p></li>
 <li><p>Length of stay (LOS, in days)</p></li>
 <li><p>Total hospitalization charges (TOTCHG), inflation-adjusted to 2017 USD</p></li>
 <li><p>Non-home discharge</p></li>
 </ul></li>
 <li><p>Readmission Characteristics:</p>
 <ul>
+<li><p>In-hospital mortality (binary)</p></li>
 <li><p>Length of stay (LOS, in days)</p></li>
 <li><p>Total hospitalization charges (inflation-adjusted to 2017 USD)</p></li>
 <li><p>Time to readmission (in days)</p></li>
@@ -198,7 +196,11 @@ ul.task-list li input[type="checkbox"] {
 <li><p>Readmission:</p>
 <ul>
 <li><p>Defined using HCUP NRD’s methodology. Readmissions were identified only among patients with qualifying index events.</p></li>
-<li><p>Trauma-related hospitalizations were excluded only from the readmission pool to avoid unrelated admissions.</p></li>
+<li><p>Trauma-related hospitalizations were excluded only from the readmission pool to avoid injury-related returns.</p></li>
+</ul></li>
+<li><p>Mortality:</p>
+<ul>
+<li>In-hospital death recorded during index or readmission (DIED = 1)</li>
 </ul></li>
 <li><p>LOS:</p>
 <ul>
@@ -268,23 +270,23 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="baseline-characteristics">Baseline Characteristics</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="uqspiatcfd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#uqspiatcfd table {
+<div id="wqfdsfsral" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#wqfdsfsral table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#uqspiatcfd thead, #uqspiatcfd tbody, #uqspiatcfd tfoot, #uqspiatcfd tr, #uqspiatcfd td, #uqspiatcfd th {
+#wqfdsfsral thead, #wqfdsfsral tbody, #wqfdsfsral tfoot, #wqfdsfsral tr, #wqfdsfsral td, #wqfdsfsral th {
   border-style: none;
 }
 
-#uqspiatcfd p {
+#wqfdsfsral p {
   margin: 0;
   padding: 0;
 }
 
-#uqspiatcfd .gt_table {
+#wqfdsfsral .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -310,12 +312,12 @@ ul.task-list li input[type="checkbox"] {
   border-left-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_caption {
+#wqfdsfsral .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#uqspiatcfd .gt_title {
+#wqfdsfsral .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -327,7 +329,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-width: 0;
 }
 
-#uqspiatcfd .gt_subtitle {
+#wqfdsfsral .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -339,7 +341,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-width: 0;
 }
 
-#uqspiatcfd .gt_heading {
+#wqfdsfsral .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -351,13 +353,13 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_bottom_border {
+#wqfdsfsral .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_col_headings {
+#wqfdsfsral .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -372,7 +374,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_col_heading {
+#wqfdsfsral .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -392,7 +394,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#uqspiatcfd .gt_column_spanner_outer {
+#wqfdsfsral .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -404,15 +406,15 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 4px;
 }
 
-#uqspiatcfd .gt_column_spanner_outer:first-child {
+#wqfdsfsral .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#uqspiatcfd .gt_column_spanner_outer:last-child {
+#wqfdsfsral .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#uqspiatcfd .gt_column_spanner {
+#wqfdsfsral .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -424,11 +426,11 @@ ul.task-list li input[type="checkbox"] {
   width: 100%;
 }
 
-#uqspiatcfd .gt_spanner_row {
+#wqfdsfsral .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#uqspiatcfd .gt_group_heading {
+#wqfdsfsral .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -454,7 +456,7 @@ ul.task-list li input[type="checkbox"] {
   text-align: left;
 }
 
-#uqspiatcfd .gt_empty_group_heading {
+#wqfdsfsral .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -469,15 +471,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: middle;
 }
 
-#uqspiatcfd .gt_from_md > :first-child {
+#wqfdsfsral .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#uqspiatcfd .gt_from_md > :last-child {
+#wqfdsfsral .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#uqspiatcfd .gt_row {
+#wqfdsfsral .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -496,7 +498,7 @@ ul.task-list li input[type="checkbox"] {
   overflow-x: hidden;
 }
 
-#uqspiatcfd .gt_stub {
+#wqfdsfsral .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -509,7 +511,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#uqspiatcfd .gt_stub_row_group {
+#wqfdsfsral .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -523,15 +525,15 @@ ul.task-list li input[type="checkbox"] {
   vertical-align: top;
 }
 
-#uqspiatcfd .gt_row_group_first td {
+#wqfdsfsral .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#uqspiatcfd .gt_row_group_first th {
+#wqfdsfsral .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#uqspiatcfd .gt_summary_row {
+#wqfdsfsral .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -541,16 +543,16 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#uqspiatcfd .gt_first_summary_row {
+#wqfdsfsral .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_first_summary_row.thick {
+#wqfdsfsral .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#uqspiatcfd .gt_last_summary_row {
+#wqfdsfsral .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -560,7 +562,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_grand_summary_row {
+#wqfdsfsral .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -570,7 +572,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#uqspiatcfd .gt_first_grand_summary_row {
+#wqfdsfsral .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -580,7 +582,7 @@ ul.task-list li input[type="checkbox"] {
   border-top-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_last_grand_summary_row_top {
+#wqfdsfsral .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -590,11 +592,11 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_striped {
+#wqfdsfsral .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#uqspiatcfd .gt_table_body {
+#wqfdsfsral .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -603,7 +605,7 @@ ul.task-list li input[type="checkbox"] {
   border-bottom-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_footnotes {
+#wqfdsfsral .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -617,7 +619,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_footnote {
+#wqfdsfsral .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -626,7 +628,7 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#uqspiatcfd .gt_sourcenotes {
+#wqfdsfsral .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -640,7 +642,7 @@ ul.task-list li input[type="checkbox"] {
   border-right-color: #D3D3D3;
 }
 
-#uqspiatcfd .gt_sourcenote {
+#wqfdsfsral .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -648,72 +650,72 @@ ul.task-list li input[type="checkbox"] {
   padding-right: 5px;
 }
 
-#uqspiatcfd .gt_left {
+#wqfdsfsral .gt_left {
   text-align: left;
 }
 
-#uqspiatcfd .gt_center {
+#wqfdsfsral .gt_center {
   text-align: center;
 }
 
-#uqspiatcfd .gt_right {
+#wqfdsfsral .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#uqspiatcfd .gt_font_normal {
+#wqfdsfsral .gt_font_normal {
   font-weight: normal;
 }
 
-#uqspiatcfd .gt_font_bold {
+#wqfdsfsral .gt_font_bold {
   font-weight: bold;
 }
 
-#uqspiatcfd .gt_font_italic {
+#wqfdsfsral .gt_font_italic {
   font-style: italic;
 }
 
-#uqspiatcfd .gt_super {
+#wqfdsfsral .gt_super {
   font-size: 65%;
 }
 
-#uqspiatcfd .gt_footnote_marks {
+#wqfdsfsral .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#uqspiatcfd .gt_asterisk {
+#wqfdsfsral .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#uqspiatcfd .gt_indent_1 {
+#wqfdsfsral .gt_indent_1 {
   text-indent: 5px;
 }
 
-#uqspiatcfd .gt_indent_2 {
+#wqfdsfsral .gt_indent_2 {
   text-indent: 10px;
 }
 
-#uqspiatcfd .gt_indent_3 {
+#wqfdsfsral .gt_indent_3 {
   text-indent: 15px;
 }
 
-#uqspiatcfd .gt_indent_4 {
+#wqfdsfsral .gt_indent_4 {
   text-indent: 20px;
 }
 
-#uqspiatcfd .gt_indent_5 {
+#wqfdsfsral .gt_indent_5 {
   text-indent: 25px;
 }
 
-#uqspiatcfd .katex-display {
+#wqfdsfsral .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#uqspiatcfd div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#wqfdsfsral div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1105,23 +1107,23 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <h3 class="anchored" data-anchor-id="outcomes-of-index-hospitalizations">Outcomes of Index Hospitalizations</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="vwjdlqsoqh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#vwjdlqsoqh table {
+<div id="newfgqosou" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#newfgqosou table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#vwjdlqsoqh thead, #vwjdlqsoqh tbody, #vwjdlqsoqh tfoot, #vwjdlqsoqh tr, #vwjdlqsoqh td, #vwjdlqsoqh th {
+#newfgqosou thead, #newfgqosou tbody, #newfgqosou tfoot, #newfgqosou tr, #newfgqosou td, #newfgqosou th {
   border-style: none;
 }
 
-#vwjdlqsoqh p {
+#newfgqosou p {
   margin: 0;
   padding: 0;
 }
 
-#vwjdlqsoqh .gt_table {
+#newfgqosou .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1147,12 +1149,12 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_caption {
+#newfgqosou .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#vwjdlqsoqh .gt_title {
+#newfgqosou .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1164,7 +1166,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#vwjdlqsoqh .gt_subtitle {
+#newfgqosou .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1176,7 +1178,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#vwjdlqsoqh .gt_heading {
+#newfgqosou .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1188,13 +1190,13 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_bottom_border {
+#newfgqosou .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_col_headings {
+#newfgqosou .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1209,7 +1211,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_col_heading {
+#newfgqosou .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1229,7 +1231,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#vwjdlqsoqh .gt_column_spanner_outer {
+#newfgqosou .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1241,15 +1243,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#vwjdlqsoqh .gt_column_spanner_outer:first-child {
+#newfgqosou .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#vwjdlqsoqh .gt_column_spanner_outer:last-child {
+#newfgqosou .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#vwjdlqsoqh .gt_column_spanner {
+#newfgqosou .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1261,11 +1263,11 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#vwjdlqsoqh .gt_spanner_row {
+#newfgqosou .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#vwjdlqsoqh .gt_group_heading {
+#newfgqosou .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1291,7 +1293,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#vwjdlqsoqh .gt_empty_group_heading {
+#newfgqosou .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1306,15 +1308,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#vwjdlqsoqh .gt_from_md > :first-child {
+#newfgqosou .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#vwjdlqsoqh .gt_from_md > :last-child {
+#newfgqosou .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#vwjdlqsoqh .gt_row {
+#newfgqosou .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1333,7 +1335,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#vwjdlqsoqh .gt_stub {
+#newfgqosou .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1346,7 +1348,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#vwjdlqsoqh .gt_stub_row_group {
+#newfgqosou .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1360,15 +1362,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#vwjdlqsoqh .gt_row_group_first td {
+#newfgqosou .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#vwjdlqsoqh .gt_row_group_first th {
+#newfgqosou .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#vwjdlqsoqh .gt_summary_row {
+#newfgqosou .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1378,16 +1380,16 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#vwjdlqsoqh .gt_first_summary_row {
+#newfgqosou .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_first_summary_row.thick {
+#newfgqosou .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#vwjdlqsoqh .gt_last_summary_row {
+#newfgqosou .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1397,7 +1399,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_grand_summary_row {
+#newfgqosou .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1407,7 +1409,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#vwjdlqsoqh .gt_first_grand_summary_row {
+#newfgqosou .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1417,7 +1419,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_last_grand_summary_row_top {
+#newfgqosou .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1427,11 +1429,11 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_striped {
+#newfgqosou .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#vwjdlqsoqh .gt_table_body {
+#newfgqosou .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1440,7 +1442,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_footnotes {
+#newfgqosou .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1454,7 +1456,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_footnote {
+#newfgqosou .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1463,7 +1465,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#vwjdlqsoqh .gt_sourcenotes {
+#newfgqosou .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1477,7 +1479,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#vwjdlqsoqh .gt_sourcenote {
+#newfgqosou .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -1485,72 +1487,72 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#vwjdlqsoqh .gt_left {
+#newfgqosou .gt_left {
   text-align: left;
 }
 
-#vwjdlqsoqh .gt_center {
+#newfgqosou .gt_center {
   text-align: center;
 }
 
-#vwjdlqsoqh .gt_right {
+#newfgqosou .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#vwjdlqsoqh .gt_font_normal {
+#newfgqosou .gt_font_normal {
   font-weight: normal;
 }
 
-#vwjdlqsoqh .gt_font_bold {
+#newfgqosou .gt_font_bold {
   font-weight: bold;
 }
 
-#vwjdlqsoqh .gt_font_italic {
+#newfgqosou .gt_font_italic {
   font-style: italic;
 }
 
-#vwjdlqsoqh .gt_super {
+#newfgqosou .gt_super {
   font-size: 65%;
 }
 
-#vwjdlqsoqh .gt_footnote_marks {
+#newfgqosou .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#vwjdlqsoqh .gt_asterisk {
+#newfgqosou .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#vwjdlqsoqh .gt_indent_1 {
+#newfgqosou .gt_indent_1 {
   text-indent: 5px;
 }
 
-#vwjdlqsoqh .gt_indent_2 {
+#newfgqosou .gt_indent_2 {
   text-indent: 10px;
 }
 
-#vwjdlqsoqh .gt_indent_3 {
+#newfgqosou .gt_indent_3 {
   text-indent: 15px;
 }
 
-#vwjdlqsoqh .gt_indent_4 {
+#newfgqosou .gt_indent_4 {
   text-indent: 20px;
 }
 
-#vwjdlqsoqh .gt_indent_5 {
+#newfgqosou .gt_indent_5 {
   text-indent: 25px;
 }
 
-#vwjdlqsoqh .katex-display {
+#newfgqosou .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#vwjdlqsoqh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#newfgqosou div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -1577,20 +1579,27 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
+<td class="gt_row gt_left" headers="label">Died during hospitalization</td>
+<td class="gt_row gt_center" headers="stat_0">7 (&lt;0.1%)</td>
+<td class="gt_row gt_center" headers="stat_1">4 (&lt;0.1%)</td>
+<td class="gt_row gt_center" headers="stat_2">2 (0.4%)</td>
+<td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="even">
 <td class="gt_row gt_left" headers="label">Length of Stay (days)</td>
 <td class="gt_row gt_center" headers="stat_0">2.00 (1.00, 2.00)</td>
 <td class="gt_row gt_center" headers="stat_1">2.00 (1.00, 2.00)</td>
 <td class="gt_row gt_center" headers="stat_2">2.00 (1.00, 4.00)</td>
 <td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td class="gt_row gt_left" headers="label">Inflation-Adjusted Total Charges ($)</td>
 <td class="gt_row gt_center" headers="stat_0">12,361 (7,655, 20,333)</td>
 <td class="gt_row gt_center" headers="stat_1">12,302 (7,621, 20,080)</td>
 <td class="gt_row gt_center" headers="stat_2">16,800 (9,813, 35,690)</td>
 <td class="gt_row gt_center" headers="p.value">&lt;0.001</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td class="gt_row gt_left" headers="label">Discharged to Non-Home Setting</td>
 <td class="gt_row gt_center" headers="stat_0">255 (0.8%)</td>
 <td class="gt_row gt_center" headers="stat_1">251 (0.8%)</td>
@@ -1599,10 +1608,10 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </tr>
 </tbody><tfoot>
 <tr class="gt_footnotes odd">
-<td colspan="5" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> Median (Q1, Q3); n (%)</td>
+<td colspan="5" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>1</sup></span> n (%); Median (Q1, Q3)</td>
 </tr>
 <tr class="gt_footnotes even">
-<td colspan="5" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> Design-based KruskalWallis test; Pearson’s X^2: Rao &amp; Scott adjustment</td>
+<td colspan="5" class="gt_footnote"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;line-height:0;"><sup>2</sup></span> Pearson’s X^2: Rao &amp; Scott adjustment; Design-based KruskalWallis test</td>
 </tr>
 </tfoot>
 
@@ -1619,8 +1628,20 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </section>
 <section id="readmission-hospitalization-characteristics" class="level2">
 <h2 class="anchored" data-anchor-id="readmission-hospitalization-characteristics">Readmission Hospitalization Characteristics</h2>
+<section id="in-hospital-mortality-among-readmitted-patients" class="level3">
+<h3 class="anchored" data-anchor-id="in-hospital-mortality-among-readmitted-patients">In-Hospital Mortality Among Readmitted Patients</h3>
+<p>Readmission hospitalizations resulted in:</p>
+<ol type="1">
+<li><p>Deaths (n): 0</p></li>
+<li><p>Death Rate (%): 0%</p></li>
+<li><p>Death Rate (95% CI): 0% to 0%</p></li>
+</ol>
+</section>
 <section id="resource-utilization-during-readmission" class="level3">
 <h3 class="anchored" data-anchor-id="resource-utilization-during-readmission">Resource Utilization During Readmission</h3>
+</section>
+<section id="resource-utilization-during-readmission-1" class="level3">
+<h3 class="anchored" data-anchor-id="resource-utilization-during-readmission-1">Resource Utilization During Readmission</h3>
 <p>Readmission hospitalizations resulted in:</p>
 <ol type="1">
 <li><p>Median Length of Stay (IQR), days: 2 (IQR: 1–3)</p></li>
@@ -1634,23 +1655,23 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 <h3 class="anchored" data-anchor-id="multivariable-predictors-of-30-day-readmission">Multivariable Predictors of 30-Day Readmission</h3>
 <div class="cell">
 <div class="cell-output-display">
-<div id="qnhwvfgjwy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
-<style>#qnhwvfgjwy table {
+<div id="bubmoonock" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#bubmoonock table {
   font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-#qnhwvfgjwy thead, #qnhwvfgjwy tbody, #qnhwvfgjwy tfoot, #qnhwvfgjwy tr, #qnhwvfgjwy td, #qnhwvfgjwy th {
+#bubmoonock thead, #bubmoonock tbody, #bubmoonock tfoot, #bubmoonock tr, #bubmoonock td, #bubmoonock th {
   border-style: none;
 }
 
-#qnhwvfgjwy p {
+#bubmoonock p {
   margin: 0;
   padding: 0;
 }
 
-#qnhwvfgjwy .gt_table {
+#bubmoonock .gt_table {
   display: table;
   border-collapse: collapse;
   line-height: normal;
@@ -1676,12 +1697,12 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-left-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_caption {
+#bubmoonock .gt_caption {
   padding-top: 4px;
   padding-bottom: 4px;
 }
 
-#qnhwvfgjwy .gt_title {
+#bubmoonock .gt_title {
   color: #333333;
   font-size: 125%;
   font-weight: initial;
@@ -1693,7 +1714,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-width: 0;
 }
 
-#qnhwvfgjwy .gt_subtitle {
+#bubmoonock .gt_subtitle {
   color: #333333;
   font-size: 85%;
   font-weight: initial;
@@ -1705,7 +1726,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-width: 0;
 }
 
-#qnhwvfgjwy .gt_heading {
+#bubmoonock .gt_heading {
   background-color: #FFFFFF;
   text-align: center;
   border-bottom-color: #FFFFFF;
@@ -1717,13 +1738,13 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_bottom_border {
+#bubmoonock .gt_bottom_border {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_col_headings {
+#bubmoonock .gt_col_headings {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1738,7 +1759,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_col_heading {
+#bubmoonock .gt_col_heading {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1758,7 +1779,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#qnhwvfgjwy .gt_column_spanner_outer {
+#bubmoonock .gt_column_spanner_outer {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1770,15 +1791,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 4px;
 }
 
-#qnhwvfgjwy .gt_column_spanner_outer:first-child {
+#bubmoonock .gt_column_spanner_outer:first-child {
   padding-left: 0;
 }
 
-#qnhwvfgjwy .gt_column_spanner_outer:last-child {
+#bubmoonock .gt_column_spanner_outer:last-child {
   padding-right: 0;
 }
 
-#qnhwvfgjwy .gt_column_spanner {
+#bubmoonock .gt_column_spanner {
   border-bottom-style: solid;
   border-bottom-width: 2px;
   border-bottom-color: #D3D3D3;
@@ -1790,11 +1811,11 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   width: 100%;
 }
 
-#qnhwvfgjwy .gt_spanner_row {
+#bubmoonock .gt_spanner_row {
   border-bottom-style: hidden;
 }
 
-#qnhwvfgjwy .gt_group_heading {
+#bubmoonock .gt_group_heading {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1820,7 +1841,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   text-align: left;
 }
 
-#qnhwvfgjwy .gt_empty_group_heading {
+#bubmoonock .gt_empty_group_heading {
   padding: 0.5px;
   color: #333333;
   background-color: #FFFFFF;
@@ -1835,15 +1856,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: middle;
 }
 
-#qnhwvfgjwy .gt_from_md > :first-child {
+#bubmoonock .gt_from_md > :first-child {
   margin-top: 0;
 }
 
-#qnhwvfgjwy .gt_from_md > :last-child {
+#bubmoonock .gt_from_md > :last-child {
   margin-bottom: 0;
 }
 
-#qnhwvfgjwy .gt_row {
+#bubmoonock .gt_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1862,7 +1883,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   overflow-x: hidden;
 }
 
-#qnhwvfgjwy .gt_stub {
+#bubmoonock .gt_stub {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1875,7 +1896,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#qnhwvfgjwy .gt_stub_row_group {
+#bubmoonock .gt_stub_row_group {
   color: #333333;
   background-color: #FFFFFF;
   font-size: 100%;
@@ -1889,15 +1910,15 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   vertical-align: top;
 }
 
-#qnhwvfgjwy .gt_row_group_first td {
+#bubmoonock .gt_row_group_first td {
   border-top-width: 2px;
 }
 
-#qnhwvfgjwy .gt_row_group_first th {
+#bubmoonock .gt_row_group_first th {
   border-top-width: 2px;
 }
 
-#qnhwvfgjwy .gt_summary_row {
+#bubmoonock .gt_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1907,16 +1928,16 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#qnhwvfgjwy .gt_first_summary_row {
+#bubmoonock .gt_first_summary_row {
   border-top-style: solid;
   border-top-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_first_summary_row.thick {
+#bubmoonock .gt_first_summary_row.thick {
   border-top-width: 2px;
 }
 
-#qnhwvfgjwy .gt_last_summary_row {
+#bubmoonock .gt_last_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1926,7 +1947,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_grand_summary_row {
+#bubmoonock .gt_grand_summary_row {
   color: #333333;
   background-color: #FFFFFF;
   text-transform: inherit;
@@ -1936,7 +1957,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#qnhwvfgjwy .gt_first_grand_summary_row {
+#bubmoonock .gt_first_grand_summary_row {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1946,7 +1967,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-top-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_last_grand_summary_row_top {
+#bubmoonock .gt_last_grand_summary_row_top {
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 5px;
@@ -1956,11 +1977,11 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_striped {
+#bubmoonock .gt_striped {
   background-color: rgba(128, 128, 128, 0.05);
 }
 
-#qnhwvfgjwy .gt_table_body {
+#bubmoonock .gt_table_body {
   border-top-style: solid;
   border-top-width: 2px;
   border-top-color: #D3D3D3;
@@ -1969,7 +1990,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-bottom-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_footnotes {
+#bubmoonock .gt_footnotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -1983,7 +2004,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_footnote {
+#bubmoonock .gt_footnote {
   margin: 0px;
   font-size: 90%;
   padding-top: 4px;
@@ -1992,7 +2013,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#qnhwvfgjwy .gt_sourcenotes {
+#bubmoonock .gt_sourcenotes {
   color: #333333;
   background-color: #FFFFFF;
   border-bottom-style: none;
@@ -2006,7 +2027,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   border-right-color: #D3D3D3;
 }
 
-#qnhwvfgjwy .gt_sourcenote {
+#bubmoonock .gt_sourcenote {
   font-size: 90%;
   padding-top: 4px;
   padding-bottom: 4px;
@@ -2014,72 +2035,72 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
   padding-right: 5px;
 }
 
-#qnhwvfgjwy .gt_left {
+#bubmoonock .gt_left {
   text-align: left;
 }
 
-#qnhwvfgjwy .gt_center {
+#bubmoonock .gt_center {
   text-align: center;
 }
 
-#qnhwvfgjwy .gt_right {
+#bubmoonock .gt_right {
   text-align: right;
   font-variant-numeric: tabular-nums;
 }
 
-#qnhwvfgjwy .gt_font_normal {
+#bubmoonock .gt_font_normal {
   font-weight: normal;
 }
 
-#qnhwvfgjwy .gt_font_bold {
+#bubmoonock .gt_font_bold {
   font-weight: bold;
 }
 
-#qnhwvfgjwy .gt_font_italic {
+#bubmoonock .gt_font_italic {
   font-style: italic;
 }
 
-#qnhwvfgjwy .gt_super {
+#bubmoonock .gt_super {
   font-size: 65%;
 }
 
-#qnhwvfgjwy .gt_footnote_marks {
+#bubmoonock .gt_footnote_marks {
   font-size: 75%;
   vertical-align: 0.4em;
   position: initial;
 }
 
-#qnhwvfgjwy .gt_asterisk {
+#bubmoonock .gt_asterisk {
   font-size: 100%;
   vertical-align: 0;
 }
 
-#qnhwvfgjwy .gt_indent_1 {
+#bubmoonock .gt_indent_1 {
   text-indent: 5px;
 }
 
-#qnhwvfgjwy .gt_indent_2 {
+#bubmoonock .gt_indent_2 {
   text-indent: 10px;
 }
 
-#qnhwvfgjwy .gt_indent_3 {
+#bubmoonock .gt_indent_3 {
   text-indent: 15px;
 }
 
-#qnhwvfgjwy .gt_indent_4 {
+#bubmoonock .gt_indent_4 {
   text-indent: 20px;
 }
 
-#qnhwvfgjwy .gt_indent_5 {
+#bubmoonock .gt_indent_5 {
   text-indent: 25px;
 }
 
-#qnhwvfgjwy .katex-display {
+#bubmoonock .katex-display {
   display: inline-flex !important;
   margin-bottom: 0.75em !important;
 }
 
-#qnhwvfgjwy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+#bubmoonock div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
   height: 0px !important;
 }
 </style>
@@ -2101,7 +2122,7 @@ N = 592<span class="gt_footnote_marks" style="white-space:nowrap;font-style:ital
 </thead>
 <tbody class="gt_table_body">
 <tr class="odd">
-<td class="gt_row gt_left" headers="label">OSA</td>
+<td class="gt_row gt_left" headers="label">Obstructive Sleep Apnea</td>
 <td class="gt_row gt_center" headers="estimate"><br>
 </td>
 <td class="gt_row gt_center" headers="conf.low"><br>
